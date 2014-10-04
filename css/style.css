@@ -10,6 +10,36 @@
   font-family: 'steelfish_rg';
   src: url('font/steelfish_rg.ttf');
 }
+@font-face {
+  font-family: 'YaquoteScript_PersonalUse';
+  src: url('font/YaquoteScript_PersonalUse.ttf');
+}
+.banner {
+  position: relative;
+}
+/*VIDEO*/
+.background-banner {
+  position: inherit;
+  opacity: 0.5;
+}
+.banner-text {
+  position: absolute;
+  z-index: 100;
+  font-family: 'YaquoteScript_PersonalUse', sans-serif;
+  width: 100%;
+  text-align: center;
+  top: 30%;
+}
+.banner-title {
+  color: #f5f5f5;
+  font-size: 89px;
+  margin: 5px 0;
+}
+.banner-eslogan {
+  color: #8d0000;
+  font-size: 54px;
+  margin: 5px 0;
+}
 /* ==========================================================================
    BARRA DE NAVEGACION
    ========================================================================== */
@@ -84,6 +114,11 @@
   font-family: 'steelfish_rg', sans-serif;
 }
 @media (max-width: 768px) {
+  /*
+	=================================================================
+	NAVBAR
+	=================================================================
+	*/
   .navbar-default img[src*="img/logop.png"] {
     margin: 20% 0 0 50%;
   }
@@ -110,5 +145,35 @@
   }
   .navbar-nav > li {
     padding: 1% 0;
+  }
+  /*
+	=================================================================
+	BANNER
+	=================================================================
+	*/
+  .banner-text {
+    top: 25%;
+  }
+  .banner-title {
+    font-size: 75px;
+  }
+  .banner-eslogan {
+    font-size: 40px;
+  }
+}
+@media (max-width: 480px) {
+  /*
+	=================================================================
+	BANNER
+	=================================================================
+	*/
+  .banner-text {
+    top: 25%;
+  }
+  .banner-title {
+    font-size: 45px;
+  }
+  .banner-eslogan {
+    font-size: 30px;
   }
 }

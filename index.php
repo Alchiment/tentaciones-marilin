@@ -42,17 +42,21 @@
 				</div>
 			</nav>
 		</header>
+		<!--BANNER -->
 		<div class="banner">
+			<!--BANNER TEXT-->
 			<div class="banner-text">
-				<h1>Tentaciones <span><img src="img/logop.png" alt="Logo pequeño" width="30"></span> Marilin</h1>
-				<h3>Moda a tu gusto</h3>
+				<!-- TITLE NAME -->
+				<h1 class="banner-title">Tentaciones <span><img src="img/logop.png" alt="Logo pequeño" width="30"></span> Marilin</h1>
+				<!-- TITLE SLOGAN -->
+				<h3 class="banner-eslogan">Moda a tu gusto</h3>
 			</div>
-			<video width="100%" loop autoplay muted>
+			<video width="100%" loop autoplay muted class="background-banner">
 				<source src="video/VID-20140927-WA0000.mp4" type="video/mp4">
+				<source src="video/VID-20140927-WA0000.webm" type="video/webm">
+				<source src="video/VID-20140927-WA0000.ogg" type="video/ogg">
 			</video>
-			<video width="100%" loop autoplay muted>
-				<source src="video/VID-20140927-WA0000.mp4" type="video/mp4">
-			</video>
+
 		</div>
 	</body>
 			<script>
