@@ -1,0 +1,73 @@
+/* ==========================================================================
+   BARRA DE NAVEGACION
+   ========================================================================== */
+.navbar{
+	margin-bottom: 0;
+	box-shadow: 0 2px @purpura1;
+}
+.navbar-nav{
+	& > li{
+		padding: 5% 0;
+	}
+}
+.navbar-default img[src*="img/logop.png"]{
+	margin: 40% 0 0 10%;
+}
+.box-index,
+.box-sections,
+.box-contact{
+	--webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+.box-index{
+	box-shadow: 0 2px @azul2;
+	&:hover,
+	&:active,
+	&:focus{
+		background-color: @azul2;
+	}
+}
+.box-sections{
+	box-shadow: 0 2px @blanco2;
+	&:hover,
+	&:active,
+	&:focus{
+		background-color: @blanco2;
+	}
+}
+.box-contact{
+	box-shadow: 0 2px @rosa;
+	&:hover,
+	&:active,
+	&:focus{
+		background-color: @rosa;
+	}
+}
+.navbar-default, .navbar-toggle{
+	background-color: @gris2;
+	border-color: @gris2;
+	border-radius: 0;
+}
+.fixed{
+	position: fixed;
+}
+.navbar-toggle{
+	right: 10px;
+	//btn navbar toggle
+	&.navbar-toggle:focus,
+	&.navbar-toggle:hover,
+	&.navbar-toggle:active{
+		background-color: lighten(@purpura1, 10%);
+		& .icon-bar{
+			background-color: @gris1;
+		}
+	}
+}
+.navbar-default .navbar-nav > li > a{
+	color: @blanco2;
+	font-size: 40px;
+	font-family: 'steelfish_rg', sans-serif;
+}
