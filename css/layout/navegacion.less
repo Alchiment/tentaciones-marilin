@@ -9,6 +9,7 @@
 	& > li{
 		padding: 5% 0;
 	}
+	z-index: 100;
 }
 .navbar-default img[src*="img/logop.png"]{
 	margin: 40% 0 0 10%;
@@ -16,7 +17,7 @@
 .box-index,
 .box-sections,
 .box-contact{
-	--webkit-transition: all 0.4s ease-in-out;
+	-webkit-transition: all 0.4s ease-in-out;
 	-moz-transition: all 0.4s ease-in-out;
 	-ms-transition: all 0.4s ease-in-out;
 	-o-transition: all 0.4s ease-in-out;
@@ -27,6 +28,10 @@
 	&:hover,
 	&:active,
 	&:focus{
+		-webkit-background-color: @azul2;
+		-moz-background-color: @azul2;
+		-ms-background-color: @azul2;
+		-o-background-color: @azul2;
 		background-color: @azul2;
 	}
 }
@@ -35,6 +40,10 @@
 	&:hover,
 	&:active,
 	&:focus{
+		-webkit-background-color: @blanco2;
+		-moz-background-color: @blanco2;
+		-ms-background-color: @blanco2;
+		-o-background-color: @blanco2;
 		background-color: @blanco2;
 	}
 }
@@ -43,6 +52,10 @@
 	&:hover,
 	&:active,
 	&:focus{
+		-webkit-background-color: @rosa;
+		-moz-background-color: @rosa;
+		-ms-background-color: @rosa;
+		-o-background-color: @rosa;
 		background-color: @rosa;
 	}
 }
@@ -56,6 +69,7 @@
 }
 .navbar-toggle{
 	right: 10px;
+	z-index: 100;
 	//btn navbar toggle
 	&.navbar-toggle:focus,
 	&.navbar-toggle:hover,

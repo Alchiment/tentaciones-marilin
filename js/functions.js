@@ -10,4 +10,7 @@ $(function(){
 		},500);
 		$('.navbar-toggle').toggleClass('fixed');
 	});
+
+
 });
+
