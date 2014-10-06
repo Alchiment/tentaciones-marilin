@@ -1,9 +1,9 @@
-@media (max-width: 768px) {
-	/*
-	=================================================================
-	NAVBAR
-	=================================================================
-	*/
+@media (max-width: @screen-tablet){
+/*
+=================================================================
+NAVBAR
+=================================================================
+*/
 	.navbar-default{
 		//logo
 			& img[src*="img/logop.png"]{
@@ -13,7 +13,6 @@
 			font-size: 30px;
 		}
 	}
-	//li content bar
 	#navheader > ul{
 		float: left;
 		width: 100%;
@@ -21,55 +20,33 @@
 			text-align: center;
 		}
 	}
-	//btn li collapsed
-	.navbar-collapse{
-		padding-right: 0;
-		padding-left: 0;
-		&.in{
-			overflow-y: visible;
-			overflow-x: visible;
-		}
-	}
 	.navbar-nav{
 		margin: 0;
 		& > li {
-			padding: 1% 0;
+			padding: 1% 1%;
 		}
 	}
-	/*
-	=================================================================
-	BANNER
-	=================================================================
-	*/
-	//CONTAINER TITLES
-	.banner-text{
-		margin-top: 15%;
-	}
-	//TITLE NAME
-	.banner-title{
-		font-size: 75px;
-	}
-	//TITLE SLOGAN
-	.banner-eslogan{
-		font-size: 40px;
-	}
 }
-@media (max-width: 480px) {
-	/*
-	=================================================================
-	BANNER
-	=================================================================
-	*/
-	//CONTAINER TITLES
-	.banner-text{
-		top: 25%;
-	}
+@media (max-width:@screen-movil){
+/*
+=================================================================
+BANNER
+=================================================================
+*/
 	//TITLE NAME
 	.banner-title{
-		font-size: 45px;
+		font-size: 50px;
 	}
-	//TITLE SLOGAN
-	.banner-eslogan{
-		font-size: 30px;
+/*
+=================================================================
+NAVBAR
+=================================================================
+*/
+	.slide{
+		& .item{
+			&  > img{
+				margin: 0 0 0 0;
+			}
+		}
 	}
 }

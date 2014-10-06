@@ -1,0 +1,103 @@
+//@media (max-width: 970px) {
+@media (max-width: @screen-desktop) {
+	.slide{
+		& .item{
+			&  > img{
+				margin: 0 0 0 30%;
+				}
+			}
+		}
+}
+//@media (max-width: 768px) {
+@media (max-width: @screen-tablet) {
+	/*
+	=================================================================
+	NAVBAR
+	=================================================================
+	*/
+	.navbar-default{
+		//logo
+			& img[src*="img/logop.png"]{
+			margin: 20% 0 0 50%;
+		}
+		& .navbar-nav > li > a{
+			font-size: 30px;
+		}
+	}
+	//li content bar
+	#navheader > ul{
+		float: left;
+		width: 100%;
+		& > li > a{
+			text-align: center;
+		}
+	}
+	//btn li collapsed
+	.navbar-collapse{
+		padding-right: 0;
+		padding-left: 0;
+		&.in{
+			overflow-y: visible;
+			overflow-x: visible;
+		}
+	}
+	.navbar-nav{
+		margin: 0;
+		& > li {
+			padding: 1% 0;
+		}
+	}
+	/*
+	=================================================================
+	BANNER
+	=================================================================
+	*/
+	//CONTAINER TITLES
+	.banner-text{
+		margin-top: 15%;
+	}
+	//TITLE NAME
+	.banner-title{
+		font-size: 75px;
+	}
+	//TITLE SLOGAN
+	.banner-eslogan{
+		font-size: 40px;
+	}
+
+	.slide{
+		& .item{
+			&  > img{
+				margin: 0 0 0 15%;
+				}
+			}
+		}
+}
+//@media (max-width: 480px) {
+@media (max-width: @screen-movil) {
+	/*
+	=================================================================
+	BANNER
+	=================================================================
+	*/
+	//CONTAINER TITLES
+	.banner-text{
+		top: 25%;
+	}
+	//TITLE NAME
+	.banner-title{
+		font-size: 45px;
+	}
+	//TITLE SLOGAN
+	.banner-eslogan{
+		font-size: 30px;
+	}
+
+	.slide{
+		& .item{
+			&  > img{
+				//margin: 0 0 0 15%;
+				}
+			}
+		}
+}

@@ -5,7 +5,7 @@
 			<meta name="description" content="Different styles of fashion Temptations Marilin">
 			<meta name="keywords" content="fashion, style, Temptations, Marilin">
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+			<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 			<title>Tentaciones Marilin</title>
 			<link rel="stylesheet" href="css/normalize.css">
 			<link rel="stylesheet" href="css/bootstrap.css">
@@ -17,6 +17,9 @@
 			<script src="js/modernizr.js"></script>
 			<script src="js/functions.js"></script>
 			<script src="js/compatibility.js"></script>
+			<!--[if IE 9]>
+				<link rel="stylesheet" href="css/ie9.css">
+			<![endif]-->
 	</head>
 	<body>
 		<!-- HEADER -->
@@ -84,7 +87,7 @@
 			<p>Seccion Mujeres</p>
 		</div>
 		<!-- SLIDER -->
-		<div class="carousel slide col-lg-6 col-md-6 col-sm-12 col-xs-12">
+		<div class="carousel slide col-lg-6 col-md-6 col-sm-6 col-xs-12" id="slider">
 			<div class="carousel-inner" id="slider">
 				<div class="item active">
 					<img src="img/pictures/ves_01.jpg" alt="imagen 1">
@@ -96,6 +99,13 @@
 					<img src="img/pictures/con_01.jpg" alt="imagen 3">
 				</div>
 			</div>
+			<!-- CONTROLS -->
+			<a href="#slider" class="left carousel-control" data-slide="prev">
+				<i class="fa fa-chevron-left"></i>
+			</a>
+			<a href="#slider" class="right carousel-control" data-slide="next">
+				<i class="fa fa-chevron-right"></i>
+			</a>
 		</div>
 	</body>
 

@@ -170,12 +170,40 @@ body * {
   margin: 0;
   padding: 0;
 }
+.slide {
+  background-color: #f5f5f5;
+}
+.slide .item > img {
+  height: 500px;
+  margin: 0 0 0 20%;
+  padding: 0;
+}
+.carousel-control {
+  color: #3a3a3a;
+  top: 250px;
+  width: 32px;
+  height: 32px;
+  padding: 1px;
+  font-size: 20px;
+  border-radius: 150px;
+  background: white;
+}
+.carousel-control.left {
+  margin-left: 5px;
+}
+.carousel-control.right {
+  margin-right: 5px;
+}
+.carousel-control.left,
+.carousel-control.right {
+  background-image: none;
+}
 @media (max-width: 768px) {
   /*
-	=================================================================
-	NAVBAR
-	=================================================================
-	*/
+=================================================================
+NAVBAR
+=================================================================
+*/
   .navbar-default img[src*="img/logop.png"] {
     margin: 20% 0 0 50%;
   }
@@ -189,48 +217,28 @@ body * {
   #navheader > ul > li > a {
     text-align: center;
   }
-  .navbar-collapse {
-    padding-right: 0;
-    padding-left: 0;
-  }
-  .navbar-collapse.in {
-    overflow-y: visible;
-    overflow-x: visible;
-  }
   .navbar-nav {
     margin: 0;
   }
   .navbar-nav > li {
-    padding: 1% 0;
-  }
-  /*
-	=================================================================
-	BANNER
-	=================================================================
-	*/
-  .banner-text {
-    margin-top: 15%;
-  }
-  .banner-title {
-    font-size: 75px;
-  }
-  .banner-eslogan {
-    font-size: 40px;
+    padding: 1% 1%;
   }
 }
 @media (max-width: 480px) {
   /*
-	=================================================================
-	BANNER
-	=================================================================
-	*/
-  .banner-text {
-    top: 25%;
-  }
+=================================================================
+BANNER
+=================================================================
+*/
   .banner-title {
-    font-size: 45px;
+    font-size: 50px;
   }
-  .banner-eslogan {
-    font-size: 30px;
+  /*
+=================================================================
+NAVBAR
+=================================================================
+*/
+  .slide .item > img {
+    margin: 0 0 0 0;
   }
 }

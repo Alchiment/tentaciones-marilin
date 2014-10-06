@@ -1,0 +1,70 @@
+.slide {
+  background-color: #f5f5f5;
+}
+.slide .item{
+  padding: 0 150px;
+}
+.carousel-control {
+  color: #3a3a3a;
+  top: 250px;
+  width: 32px;
+  height: 32px;
+  padding: 1px;
+  font-size: 20px;
+  border-radius: 150px;
+  background-color: white;
+}
+.carousel-control.left {
+  margin-left: 5px;
+}
+.carousel-control.right {
+  margin-right: 5px;
+}
+.carousel-control.left,
+.carousel-control.right {
+  background-color: white;
+}
+@media (max-width: 768px) {
+  /*
+=================================================================
+NAVBAR
+=================================================================
+*/
+  .navbar-default img[src*="img/logop.png"] {
+    margin: 20% 0 0 50%;
+  }
+  .navbar-default .navbar-nav > li > a {
+    font-size: 30px;
+  }
+  #navheader > ul {
+    float: left;
+    width: 100%;
+  }
+  #navheader > ul > li > a {
+    text-align: center;
+  }
+  .navbar-nav {
+    margin: 0;
+  }
+  .navbar-nav > li {
+    padding: 1% 1%;
+  }
+}
+@media (max-width: 480px) {
+  /*
+=================================================================
+BANNER
+=================================================================
+*/
+  .banner-title {
+    font-size: 50px;
+  }
+  /*
+=================================================================
+NAVBAR
+=================================================================
+*/
+  .slide .item > img {
+    margin: 0 0 0 0;
+  }
+}

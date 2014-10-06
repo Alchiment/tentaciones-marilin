@@ -1,3 +1,30 @@
-.carousel-inner, .item{
-	height: @height-cont-img;
+.slide{
+	background-color: @gris1;
+	& .item{
+		&  > img{
+			height: @height-cont-slider;
+			margin: 0 0 0 20%;
+			padding: 0;
+		}
+	}
+}
+
+.carousel-control{
+	color: @negro1;
+	top: @height-cont-slider/2;
+	width: 32px;
+	height: 32px;
+	padding: 1px;
+	font-size: 20px;
+	border-radius: 150px;
+	background: white;
+	&.left{
+		margin-left: 5px;
+	}
+	&.right{
+		margin-right: 5px;
+	}
+	&.left, &.right{
+		background-image: none;
+	}
 }
