@@ -1,4 +1,6 @@
 $(function(){
+/*
+BOTON TOGGLE FIXED / DISABLED
 	//validar la posicion del scroll
 	if (window.scrollTop != 0) {
 		$('.navbar-toggle').addClass('fixed');
@@ -10,7 +12,8 @@ $(function(){
 		},500);
 		$('.navbar-toggle').toggleClass('fixed');
 	});
-
-
+*/
+$('a, img').tooltip();
+$('.carousel').carousel();
 });
 

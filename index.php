@@ -7,15 +7,16 @@
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
 			<title>Tentaciones Marilin</title>
+			<link rel="stylesheet" href="css/normalize.css">
 			<link rel="stylesheet" href="css/bootstrap.css">
 			<link rel="stylesheet" href="css/style.css">
-			<link rel="stylesheet" href="css/normalize.css">
 			<link rel="stylesheet" href="img/awesome/css/font-awesome.css">
 			<script src="js/jquery-1.11.1.min.js"></script>
 			<script src="js/bootstrap.js"></script>
 			<script src="js/browser.js"></script>
+			<script src="js/modernizr.js"></script>
 			<script src="js/functions.js"></script>
-			<script src="js/Compatibility.js"></script>
+			<script src="js/compatibility.js"></script>
 	</head>
 	<body>
 		<!-- HEADER -->
@@ -62,6 +63,7 @@
 				</div>
 			</div>
 		</div>
+
 		<!--BANNER -->
 		<div class="banner">
 			<!--BANNER TEXT-->
@@ -71,51 +73,30 @@
 				<!-- TITLE SLOGAN -->
 				<h3 class="banner-eslogan">Moda a tu gusto</h3>
 			</div>
-			<video width="100%" loop autoplay muted class="background-banner">
+			<video loop autoplay muted class="background-banner">
 				<source src="video/VID-20140927-WA0000.mp4" type="video/mp4">
 				<source src="video/VID-20140927-WA0000.webm" type="video/webm">
 				<source src="video/VID-20140927-WA0000.ogg" type="video/ogg">
-				<img src="img/video.png" alt="" witdh="100%">
 			</video>
-
+		</div>
+		<!-- SEPARATOR -->
+		<div class="separator">
+			<p>Seccion Mujeres</p>
+		</div>
+		<!-- SLIDER -->
+		<div class="carousel slide col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<div class="carousel-inner" id="slider">
+				<div class="item active">
+					<img src="img/pictures/ves_01.jpg" alt="imagen 1">
+				</div>
+				<div class="item">
+					<img src="img/pictures/ves_02.jpg" alt="imagen 2">
+				</div>
+				<div class="item">
+					<img src="img/pictures/con_01.jpg" alt="imagen 3">
+				</div>
+			</div>
 		</div>
 	</body>
-	<script>
-		var brw  = new Browser();
-		$(function(){
-
-			if(brw.fullName == 'Microsoft Internet Explorer' || brw.fullName == 'Apple Safari'){
-				//Message alert
-				$('body').prepend('<div class="message">'+
-								'<span id="cerrar" class="cerrar"><i class="fa fa-close"></i></span>'+
-								'<h3>Atención <i class="fa fa-exclamation-triangle" style="color: yellow;"></i></h3>'+
-								'<hr>'+
-								'<p">'+
-								'Usted está usando un motor de navegación con <i>'+brw.name+'</i><br>'+
-								'Algunas características no funcionan correctamente.<br>' +
-								'<b>Abra la página en otro navegador como: </b>  <br>'+
-								'<b><i><a href="http://www.google.com/intl/es-419/chrome/">Google Chrome</a></i> </b> <br>'+
-								'<b><i><a href="https://www.mozilla.org/es-ES/firefox/new/">FireFox Mozilla</a></i> </b>'+
-								'</p>'+
-								'</div>');
-				//btn Close
-				$('#cerrar').on('click',function(){
-						$('body .message').slideUp(300,function(){$('body .message').remove()});
-				});
-			}
-			// Support IE, Alert Message - Incompatibility
-			if(brw.fullName == 'Microsoft Internet Explorer' && brw.version < 9){
-			 $('.modal-body').append('Su navegador NO es compatible con todas las características de la página web. <br>' +
-			 						 'Actualice su navegador a una versión mayor a ' + brw.fullVersion + '<br> <hr>' +
-			 						 '<b>Datos del navegador:</b> <br>' +
-			 						 'Nombre: ' + brw.fullName + '<br>' +
-			 						 'Versión: '+ brw.fullVersion +'<br>'+
-			 						 'Plataforma: '+ brw.platform + '.'
-			 						 );
-			 $('.fade').modal();
-			}
-		});
-		$('a, img').tooltip();
-	</script>
 
 </html>
