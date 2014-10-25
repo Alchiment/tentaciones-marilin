@@ -170,33 +170,79 @@ body * {
   margin: 0;
   padding: 0;
 }
-.slide {
-  background-color: #f5f5f5;
-}
-.slide .item > img {
-  height: 500px;
-  margin: 0 0 0 20%;
+/*
+	=================================================================
+	SLIDER
+	=================================================================
+*/
+.sli {
+  margin: 0;
   padding: 0;
 }
-.carousel-control {
-  color: #3a3a3a;
+.slider-box {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  background: #f5f5f5;
+}
+.slider-container {
+  white-space: nowrap;
+}
+.slide {
+  display: inline-block;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.left,
+.right {
+  position: absolute;
   top: 250px;
-  width: 32px;
-  height: 32px;
-  padding: 1px;
-  font-size: 20px;
-  border-radius: 150px;
+  cursor: pointer;
+  padding: 0 18px;
+  margin: 5px;
+  border-radius: 100px;
   background: white;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
 }
-.carousel-control.left {
-  margin-left: 5px;
+.left:hover,
+.right:hover {
+  background: #edeff0;
 }
-.carousel-control.right {
-  margin-right: 5px;
+.left {
+  left: 0;
 }
-.carousel-control.left,
-.carousel-control.right {
-  background-image: none;
+.right {
+  right: 0;
+}
+/*
+	=================================================================
+	IMAGES
+	=================================================================
+*/
+.img {
+  margin: 0;
+  padding: 0;
+}
+.images-box {
+  position: relative;
+  background: #f5f5f5;
+}
+.images-box img {
+  height: 250px;
+  float: left;
+}
+@media (min-width: 1170px) {
+  /*	.slide{
+		& .item{
+			&  > img{
+				margin: 0 0 0 15%;
+			}
+		}
+	}*/
 }
 @media (max-width: 768px) {
   /*

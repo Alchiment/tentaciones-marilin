@@ -1,30 +1,48 @@
+/*
+	=================================================================
+	SLIDER
+	=================================================================
+*/
+//delete margin, padding bootstrap
+.sli{
+	margin: 0;
+	padding: 0;
+}
+.slider-box{
+	position: relative;
+	overflow: hidden;
+	margin: 0 auto;
+	background: @gris1;
+}
+.slider-container{
+	white-space: nowrap;
+
+}
 .slide{
-	background-color: @gris1;
-	& .item{
-		&  > img{
-			height: @height-cont-slider;
-			margin: 0 0 0 20%;
-			padding: 0;
-		}
+	display: inline-block;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.left, .right{
+	position: absolute;
+	top: @height-cont-slider/2;
+	cursor:pointer;
+	padding:0 18px;
+	margin: 5px;
+	border-radius: 100px;
+	background: white;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	&:hover{
+		background: @blanco2;
 	}
 }
-
-.carousel-control{
-	color: @negro1;
-	top: @height-cont-slider/2;
-	width: 32px;
-	height: 32px;
-	padding: 1px;
-	font-size: 20px;
-	border-radius: 150px;
-	background: white;
-	&.left{
-		margin-left: 5px;
-	}
-	&.right{
-		margin-right: 5px;
-	}
-	&.left, &.right{
-		background-image: none;
-	}
+.left{
+	left: 0;
+}
+.right{
+	right: 0;
 }

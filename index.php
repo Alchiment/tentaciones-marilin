@@ -12,6 +12,7 @@
 			<link rel="stylesheet" href="css/style.css">
 			<link rel="stylesheet" href="img/awesome/css/font-awesome.css">
 			<script src="js/jquery-1.11.1.min.js"></script>
+		<script src='http://code.jquery.com/jquery-latest.js'></script>
 			<script src="js/bootstrap.js"></script>
 			<script src="js/browser.js"></script>
 			<script src="js/modernizr.js"></script>
@@ -87,26 +88,47 @@
 			<p>Seccion Mujeres</p>
 		</div>
 		<!-- SLIDER -->
-		<div class="carousel slide col-lg-6 col-md-6 col-sm-6 col-xs-12" id="slider">
-			<div class="carousel-inner" id="slider">
-				<div class="item active">
-					<img src="img/pictures/ves_01.jpg" alt="imagen 1">
+		<section class="col-lg-6 col-md-6 col-sm-6 col-xs-12 sli">
+			<div class="slider-box">
+				<div class="slider-container">
+					<div class="slide" data-background="ves_02.jpg"></div>
+					<div class="slide" data-background="ves_01.jpg"></div>
+					<div class="slide" data-background="con_01.jpg"></div>
 				</div>
-				<div class="item">
-					<img src="img/pictures/ves_02.jpg" alt="imagen 2">
+				<span href="" class="left"><i class="fa fa-angle-left fa-4x"></i></span>
+				<span href="" class="right"><i class="fa fa-angle-right fa-4x"></i></span>
+			</div>
+		</section>
+		<!-- IMGS -->
+		<section class="col-lg-6 col-md-6 col-sm-6 col-xs-12 img">
+			<div class="images-box">
+				<div class="row">
+					<div class="col-lg-2">
+						<img src="img/backgrounds/img-vestidos.png" alt="Imagen Vestidos">
+					</div>
+					<div class="col-lg-2">
+						<img src="img/backgrounds/img-conjuntos.png" alt="Imagen Conjuntos">
+					</div>
+					<div class="col-lg-2">
+						<img src="img/backgrounds/img-lycra.png" alt="Imagen Lycra">
+					</div>
 				</div>
-				<div class="item">
-					<img src="img/pictures/con_01.jpg" alt="imagen 3">
+				<div class="row">
+					<div class="col-lg-2">
+						<img src="img/backgrounds/img-blusa.png" alt="Imagen blusa">
+					</div>
+					<div class="col-lg-2">
+						<img src="img/backgrounds/img-ropain.png" alt="Imagen ropa interior">
+					</div>
+					<div class="col-lg-2">
+						<img src="img/backgrounds/img-ropaba.png" alt="Imagen ropa de baño">
+					</div>
 				</div>
 			</div>
-			<!-- CONTROLS -->
-			<a href="#slider" class="left carousel-control" data-slide="prev">
-				<i class="fa fa-chevron-left"></i>
-			</a>
-			<a href="#slider" class="right carousel-control" data-slide="next">
-				<i class="fa fa-chevron-right"></i>
-			</a>
-		</div>
+		</section>
 	</body>
+<script type="text/javascript">
 
+
+</script>
 </html>

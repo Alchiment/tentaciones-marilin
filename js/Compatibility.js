@@ -20,7 +20,7 @@ $(function(){
 						'<span id="cerrar" class="cerrar"><i class="fa fa-close"></i></span>'+
 						'<h3>Atención <i class="fa fa-exclamation-triangle" style="color: yellow;"></i></h3>'+
 						'<hr>'+
-						'<p">'+
+						'<p>'+
 						'Algunas características no funcionan correctamente.<br>' +
 						'<b>Abra la página en otro navegador como: </b>  <br>'+
 						'<b><i><a href="http://www.google.com/intl/es-419/chrome/" target="_blank">Google Chrome</a></i> </b> <br>'+
