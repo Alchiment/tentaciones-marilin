@@ -1,0 +1,360 @@
+/*
+	******version 1.0 Estilo de tentaciones marilin.*****
+	IMPORTACION DE TODOS LO COMPONENTES LESS
+*/
+/* ==========================================================================
+   Variables
+   Los colores se oscurecen a medida que suben los mujeros: Ejm color1 - blanco / color2 - negro
+   ========================================================================== */
+.preloadWeb {
+  background: rgba(180, 180, 180, 0.7);
+  z-index: 101;
+  position: absolute;
+  top: 0;
+  float: left;
+  padding: 20% 0 0 45%;
+}
+@font-face {
+  font-family: 'steelfish_rg';
+  src: url('font/steelfish_rg.ttf'), url('font/steelfish_rg.eot'), url('font/steelfish_rg.woff');
+}
+@font-face {
+  font-family: 'YaquoteScript_PersonalUse';
+  src: url('font/YaquoteScript_PersonalUse.ttf'), url('font/YaquoteScript_PersonalUse.eot'), url('font/YaquoteScript_PersonalUse.woff');
+}
+.banner {
+  position: relative;
+  width: 100%;
+  line-height: 0;
+}
+/*VIDEO*/
+.background-banner {
+  position: inherit;
+  width: inherit;
+  height: auto;
+  opacity: 0.5;
+}
+.banner-text {
+  position: absolute;
+  z-index: 90;
+  font-family: 'YaquoteScript_PersonalUse', sans-serif;
+  width: 100%;
+  text-align: center;
+  margin-top: 25%;
+  line-height: normal;
+}
+.banner-title {
+  color: #f5f5f5;
+  font-size: 89px;
+  margin: 5px 0;
+}
+.banner-eslogan {
+  color: #8d0000;
+  font-size: 54px;
+  margin: 5px 0;
+}
+body,
+body * {
+  margin: 0;
+  padding: 0;
+}
+/* ==========================================================================
+   BARRA DE NAVEGACION
+   ========================================================================== */
+.navbar {
+  margin-bottom: 0;
+  box-shadow: 0 2px #9b59b6;
+}
+.navbar-nav {
+  z-index: 100;
+}
+.navbar-nav > li {
+  padding: 5% 0;
+}
+.navbar-default img[src*="img/logop.png"] {
+  margin: 40% 0 0 10%;
+}
+.box-index,
+.box-sections,
+.box-contact {
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.box-index {
+  box-shadow: 0 2px #3498db;
+}
+.box-index:hover,
+.box-index:active,
+.box-index:focus {
+  -webkit-background-color: #3498db;
+  -moz-background-color: #3498db;
+  -ms-background-color: #3498db;
+  -o-background-color: #3498db;
+  background-color: #3498db;
+}
+.box-sections {
+  box-shadow: 0 2px #edeff0;
+}
+.box-sections:hover,
+.box-sections:active,
+.box-sections:focus {
+  -webkit-background-color: #edeff0;
+  -moz-background-color: #edeff0;
+  -ms-background-color: #edeff0;
+  -o-background-color: #edeff0;
+  background-color: #edeff0;
+}
+.box-contact {
+  box-shadow: 0 2px #c97875;
+}
+.box-contact:hover,
+.box-contact:active,
+.box-contact:focus {
+  -webkit-background-color: #c97875;
+  -moz-background-color: #c97875;
+  -ms-background-color: #c97875;
+  -o-background-color: #c97875;
+  background-color: #c97875;
+}
+.navbar-default,
+.navbar-toggle {
+  background-color: #4b4b4d;
+  border-color: #4b4b4d;
+  border-radius: 0;
+}
+.fixed {
+  position: fixed;
+}
+.navbar-toggle {
+  right: 10px;
+  z-index: 100;
+}
+.navbar-toggle.navbar-toggle:focus,
+.navbar-toggle.navbar-toggle:hover,
+.navbar-toggle.navbar-toggle:active {
+  background-color: #b07cc6;
+}
+.navbar-toggle.navbar-toggle:focus .icon-bar,
+.navbar-toggle.navbar-toggle:hover .icon-bar,
+.navbar-toggle.navbar-toggle:active .icon-bar {
+  background-color: #f5f5f5;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #edeff0;
+  font-size: 35px;
+  font-family: 'steelfish_rg', sans-serif;
+}
+.message {
+  width: 100%;
+  background-color: #c97875;
+  padding: 0.5%;
+  position: relative;
+  margin: 0;
+  text-align: center;
+}
+.message a {
+  color: #edeff0;
+}
+.cerrar {
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}
+.separator {
+  padding: 0.2% 0;
+  text-align: center;
+  font-family: 'steelfish_rg', sans-serif;
+  color: #8d0000;
+  background-color: #e6e6e6;
+  font-size: 30px;
+  position: relative;
+  width: 100%;
+  z-index: 100;
+}
+.separator * {
+  margin: 0;
+  padding: 0;
+}
+/*
+	=================================================================
+	SLIDER
+	=================================================================
+*/
+.sli {
+  margin: 0;
+  padding: 0;
+}
+.carousel-inner > .item > img {
+  height: 500px;
+  margin: 0 auto;
+}
+/*
+	=================================================================
+	IMAGES
+	=================================================================
+*/
+.img {
+  margin: 0;
+  padding: 0;
+}
+.images-box {
+  height: 500px;
+  position: relative;
+  background: #f5f5f5;
+  overflow: hidden;
+}
+.image-min {
+  position: relative;
+  height: 250px;
+  border: 1px solid #e6e6e6;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.image-min > img {
+  margin: 40% 0 0 40%;
+  background-size: cover;
+  background-position: center;
+  height: 64px;
+  width: 64px;
+}
+.image-min .image-text-1,
+.image-min .image-text-2 {
+  font-family: 'YaquoteScript_PersonalUse', sans-serif;
+  font-size: 40px;
+}
+.image-min .image-text-1 {
+  margin: 10% 0 0 40%;
+}
+.image-min .image-text-2 {
+  margin: 10% 0 0 15%;
+}
+.image-min:hover {
+  background: #dcdcdc;
+}
+.image-min:hover .image-text {
+  color: #8d0000;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.image-min:hover img {
+  transform: scale(1.5);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+/*
+.image{
+	// height: 100px;
+	float: left;
+	margin: 50% 0 0 37%;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+	}
+ */
+@media (min-width: 1170px) {
+  /*	.slide{
+		& .item{
+			&  > img{
+				margin: 0 0 0 15%;
+			}
+		}
+	}*/
+}
+@media (max-width: 768px) {
+  /*
+=================================================================
+NAVBAR
+=================================================================
+*/
+  .navbar-default img[src*="img/logop.png"] {
+    margin: 20% 0 0 50%;
+  }
+  .navbar-default .navbar-nav > li > a {
+    font-size: 30px;
+  }
+  #navheader > ul {
+    float: left;
+    width: 100%;
+  }
+  #navheader > ul > li > a {
+    text-align: center;
+  }
+  .navbar-nav {
+    margin: 0;
+  }
+  .navbar-nav > li {
+    padding: 1% 1%;
+  }
+  /*
+	=================================================================
+	IMAGES
+	=================================================================
+*/
+  .image-min > img {
+    margin: 40% 0 0 0;
+  }
+  .images-box {
+    height: auto;
+  }
+  .image-text-1,
+  .image-text-2 {
+    font-family: 'YaquoteScript_PersonalUse', sans-serif;
+    font-size: 30px;
+  }
+  .image-text-1 {
+    margin: 10% 0 0 35%;
+  }
+  .image-text-2 {
+    margin: 10% 0 0 10%;
+  }
+}
+@media (max-width: 480px) {
+  /*
+=================================================================
+BANNER
+=================================================================
+*/
+  .banner-title {
+    font-size: 50px;
+  }
+  /*
+=================================================================
+NAVBAR
+=================================================================
+*/
+  .slide .item > img {
+    margin: 0 0 0 0;
+  }
+  /*
+	=================================================================
+	SLIDER
+	=================================================================
+*/
+  .left,
+  .right {
+    top: 125px;
+    padding: -5px 15px;
+  }
+  /*
+	=================================================================
+	IMAGES
+	=================================================================
+*/
+  .image-min > img {
+    margin: 5% 30%;
+  }
+}

@@ -1,0 +1,78 @@
+/*
+	=================================================================
+	IMAGES
+	=================================================================
+*/
+//delete margin, padding bootstrap
+.img{
+	margin: 0;
+	padding: 0;
+}
+ .images-box{
+ 	height: @heightContainer;
+	position: relative;
+	background: @gris1;
+	overflow: hidden;
+	// margin: 0 auto;
+}
+.image-min{
+	position: relative;
+	height: @heightContainer / 2;
+	border: 1px solid @gris2;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	& > img{
+		margin: 40% 0 0 40%;
+		background-size: cover;
+		background-position: center;
+		height: 64px;
+		width: 64px;
+	}
+	.image-text-1,.image-text-2{
+		font-family: @font-yaquote;
+		font-size: 40px;
+	}
+	.image-text-1{
+		margin: 10% 0 0 40%;
+	}
+	.image-text-2{
+		margin: 10% 0 0 15%;
+	}
+	&:hover{
+		background: darken(@gris1, 10%);
+		
+		.image-text{
+			color: @rojo;
+			-webkit-transition: all 0.3s ease-in-out;
+			-moz-transition: all 0.3s ease-in-out;
+			-ms-transition: all 0.3s ease-in-out;
+			-o-transition: all 0.3s ease-in-out;
+			transition: all 0.3s ease-in-out;
+		}
+
+		img{
+			transform: scale(1.5);
+			-webkit-transition: all 0.3s ease-in-out;
+			-moz-transition: all 0.3s ease-in-out;
+			-ms-transition: all 0.3s ease-in-out;
+			-o-transition: all 0.3s ease-in-out;
+			transition: all 0.3s ease-in-out;
+		}
+	}
+
+}
+/*
+.image{
+	// height: 100px;
+	float: left;
+	margin: 50% 0 0 37%;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+	}
+ */
