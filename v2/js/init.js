@@ -296,9 +296,31 @@
 						});
 				
 				}
+				$('a.ancla').click(function(e){
+		            e.preventDefault();
+			        $('html, body').animate({
+			        	scrollTop: $($(this).attr('href')).offset().top
+			        }, 3000);
+		            });
+				}
+				        $('.btn-top').fadeOut();
+			    
+			    $(window).scroll(function(){
+				    if ($(this).scrollTop() > 200) {
+				        $('.btn-top').fadeIn();
+				    } else {
+				        $('.btn-top').fadeOut();
+				    }
+				});
 
-			}
-
+			    // if($('html, body').scrollTop() < 500){
+			    // 	$('.btn-top').fadeIn();
+			    // }else{
+			    // 	$('.btn-top').fadeOut();
+			    // }
+			    	$('.btn-top').on('click', function(){
+			    		$('html, body').animate({scrollTop: 0}, 3000);
+			    	});
 	});
 
 })(jQuery);
