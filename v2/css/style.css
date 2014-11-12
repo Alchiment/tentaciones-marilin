@@ -700,7 +700,7 @@
 	#header
 	{
 		position: relative;
-		background-image: url('../images/header.jpg');
+		background-image: url('../images/Background10.jpg');
 		/*background-image: url('../images/video.PNG');*/
 		background-size: cover;
 		background-position: center center;
@@ -1265,6 +1265,9 @@
 				position: fixed;
 				padding: 0;
 				border-radius: 100px;
-				padding-top: 0.5%;
+				padding-top: 10px;
+				padding-left: 15px;
 				margin-right: 1%;
+				background: #df7366;
+			color: #fff;
 			}
