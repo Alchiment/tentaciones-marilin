@@ -22,6 +22,9 @@
 /* Basic                                                                         */
 /*********************************************************************************/
 
+	.title-steel{
+		font-family: 'steelfish_rg', serif;
+	}
 	body
 	{
 		background: #f0f4f4;
@@ -190,7 +193,7 @@
 		color: rgba(128,128,128,0.75);
 		font-size: 0.8em;
 	}
-
+	
 	/* Sections/Article */
 	
 		section,
@@ -256,11 +259,20 @@
 		
 			/* Uncomment the block below if you want linked images to highlight on hover */
 		
-			.image img
+			.image img.slide
 			{
 				display: block;
 				width: 100%;
 				height: 500px;
+			}
+			.image img.img-title{
+				display: block;
+				width: 100%;
+				height: 700px;	
+				transition: all 0.3s ease-in-out;
+			}
+			.image img.img-title:hover{
+				box-shadow: 5px 5px 10px #2b252c, -5px -5px 10px #2b252c;
 			}
 
 			.image.fit
@@ -700,7 +712,7 @@
 	#header
 	{
 		position: relative;
-		background-image: url('../images/Background10.jpg');
+		background-image: url('../images/IMG_20141111_2123572.jpg');
 		/*background-image: url('../images/video.PNG');*/
 		background-size: cover;
 		background-position: center center;
@@ -1078,7 +1090,21 @@
 			text-align: center;
 			cursor: default;
 		}
-		
+		/****************/
+		/*Info personal**/
+		/****************/
+		#footer .title-footer{
+			font-family: 'YaquoteScript_PersonalUse';
+		}
+		#footer .sub-title-footer
+		{
+			color: rgba(140,140,140,0.75);
+			font-size: 1em;
+		}
+		#footer .img-title-footer{
+			height: 400px;
+			margin-left: 25%;
+		}
 		#footer h2,
 		#footer h3,
 		#footer h4,
