@@ -1,25 +1,23 @@
 <aside class="right-side">
 	<!-- <div class="col-xs-12"> -->
-			<section class="content-header">
-					<h1 class="box-title"><?php echo lang('index_heading');?></h1>
-					<a href="auth/logout">Cerrar</a>
-					<!-- <button class="btn btn-default pull-left"><?//=anchor('auth/create_user', lang('index_create_user_link'))?></button> -->
-					<!-- <button class="btn btn-default pull-left"><?//=anchor('auth/create_group', lang('index_create_group_link'));?></button> -->
-					<p class="pull-right"><?php echo lang('index_subheading');?></p><br>
-				
-			</section>
-			<section class="content">
+	<section class="content-header">
+				<h1 class="box-title"><?php echo lang('index_heading');?></h1>
+				<a href="auth/logout">Cerrar</a>
+				<!-- <button class="btn btn-default pull-left"><?//=anchor('auth/create_user', lang('index_create_user_link'))?></button> -->
+				<!-- <button class="btn btn-default pull-left"><?//=anchor('auth/create_group', lang('index_create_group_link'));?></button> -->
+				<p class="pull-right"><?php echo lang('index_subheading');?></p><br>
+		</section>
+		<section class="content">
 		<div class="box">
-				
-			 <div class="box-body table-responsive no-padding">
-			 	 <div class="box-header">
-					<button class="btn btn-default pull-left btnNewUser" data-create-user="auth/create_user">
-						<?=lang('index_create_user_link')?>
-					</button>
-					<button class="btn btn-default pull-left btnNewGroup" data-create-group="auth/create_group">
-						<?=lang('index_create_group_link');?>
-					</button>
-				</div>
+			<div class="box-body table-responsive no-padding">
+				 	<div class="box-header">
+						<button class="btn btn-default pull-left btnNewUser" data-create-user="auth/create_user">
+							<?=lang('index_create_user_link')?>
+						</button>
+						<button class="btn btn-default pull-left btnNewGroup" data-create-group="auth/create_group">
+							<?=lang('index_create_group_link');?>
+						</button>
+					</div>
 					<div class="box-body table-responsive no-padding">
 						<table cellpadding=0 cellspacing=10 class="table table-hover">
 							<tr>
@@ -44,15 +42,15 @@
 									</td>
 									<td>
 
-										<?if($user->active):?>
+										<?php if($user->active):?>
 											<button class="btn btn-primary btn-flat btnActive" data-estado-id='auth/deactivate/<?=$user->id?>'>
 												<a class="sta"><?=lang('index_active_link')?></a>
 											</button>
-										<?else:?>
+										<?php else:?>
 											<button class="btn btn-primary btn-flat btnActive" data-estado-id='auth/activate/<?=$user->id?>'>
 												<a class="sta"><?=lang('index_inactive_link')?></a>
 											</button>
-										<?endif?>
+										<?php endif?>
 									</td>
 									<td>
 										<button class="btn btn-primary btn-flat btnEditar" data-user-id="<?=$user->id?>">
@@ -66,9 +64,9 @@
 			</div>
 		</div>
 		<section class="content">
-				<span class="box-close"><i class="fa fa-times fa-2x"></i></span>
-				<div class="box-admin"></div>
+			<span class="box-close"><i class="fa fa-times fa-2x"></i></span>
+			<div class="box-admin"></div>
 		</section>
-			</section>
+	</section>
 	<!-- </div> -->
 </aside>

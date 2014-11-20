@@ -23,6 +23,7 @@ class Auth extends CI_Controller {
 			//redirect them to the login page
 			$this->load->view('body/head.php');
 			redirect('auth/login', 'refresh');
+			$this->load->view('body/footer.php');
 		}
 		elseif (!$this->ion_auth->is_admin()) //remove this elseif if you want to enable this for non-admins
 		{
@@ -42,9 +43,11 @@ class Auth extends CI_Controller {
 			}
 
 			$this->load->view('body/head.php');
-			$this->load->view('body/navheader.php');
-			$this->load->view('body/user-panel.php');
+			// $this->load->view('body/navheader.php');
+			// $this->load->view('body/user-panel.php');
+			print_r($this->session->userdata('identity'));
 			$this->_render_page('auth/index', $this->data);
+			$this->load->view('body/footer.php');
 		}
 	}
 
