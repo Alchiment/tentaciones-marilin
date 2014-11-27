@@ -44,4 +44,7 @@ $(function(){
 		$('.box-close').show();
 	});
 
+	// $('.logout').click(function(){
+	// 	window.location('auth/logout');
+	// });
 });

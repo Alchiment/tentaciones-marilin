@@ -1,6 +1,14 @@
-#Deny from all
-    RewriteEngine On
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(.*)$ /tentaciones-marilin/dashboard/index.php/ [L]
-    ErrorDocument 404 /tentaciones-marilin/dashboard/index.php
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /tentaciones-marilin/dashboard/
+
+RewriteCond %{REQUEST_URI} ^system.*
+RewriteRule ^(.*)$ /index.php?/$1 [L]
+
+RewriteCond %{REQUEST_URI} ^application.*
+RewriteRule ^(.*)$ /index.php?/$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?/$1 [L]
+</IfModule>

@@ -19,7 +19,8 @@ class Auth extends CI_Controller {
 	{
 
 		if (!$this->ion_auth->logged_in())
-		{
+		{	
+			//login == 0 // logout
 			//redirect them to the login page
 			$this->load->view('body/head.php');
 			redirect('auth/login', 'refresh');
@@ -32,6 +33,7 @@ class Auth extends CI_Controller {
 		}
 		else
 		{
+
 			//set the flash data error message if there is one
 			$this->data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
 
@@ -42,10 +44,11 @@ class Auth extends CI_Controller {
 				$this->data['users'][$k]->groups = $this->ion_auth->get_users_groups($user->id)->result();
 			}
 
+			$this->data['usuarios'] = $user = $this->ion_auth->user()->row();
 			$this->load->view('body/head.php');
 			// $this->load->view('body/navheader.php');
-			// $this->load->view('body/user-panel.php');
-			print_r($this->session->userdata('identity'));
+			$this->load->view('body/user-panel.php');
+			// print_r($this->session->userdata('identity'));
 			$this->_render_page('auth/index', $this->data);
 			$this->load->view('body/footer.php');
 		}
@@ -103,6 +106,7 @@ class Auth extends CI_Controller {
 
 			$this->load->view('body/head.php');
 			$this->_render_page('auth/login', $this->data);
+			$this->load->view('body/footer.php');
 		}
 	}
 
