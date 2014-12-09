@@ -40,11 +40,25 @@ $(function(){
 	$('.btnEditar').on('click',function(e){
 		e.preventDefault();
 		var get = $(this).data('user-id');
-		$('.box-admin').load('auth/edit_user/'+get);
+		$('.box-admin').load('../auth/edit_user/'+get);
 		$('.box-close').show();
 	});
 
-	// $('.logout').click(function(){
-	// 	window.location('auth/logout');
-	// });
+
+	$('.logout').click(function(){
+		window.location = base_url() + 'auth/logout';
+	});
+	$('.btnNuevaFoto').click(function(){
+		window.location = base_url() + 'images/add_images';
+	});
 });
+var base_url = function(){
+	var uri = 'http://220.220.221.163/tentaciones-marilin/dashboard/';
+	return uri;
+}
+var successMessage = function(){
+	$('#infoMessage').show(slow);
+	setTimeout(function(){	
+		$('#infoMessage').hide(slow);
+	}, 1000);
+}

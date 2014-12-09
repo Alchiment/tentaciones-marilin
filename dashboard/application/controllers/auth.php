@@ -17,40 +17,37 @@ class Auth extends CI_Controller {
 	//redirect if needed, otherwise display the user list
 	function index()
 	{
-
 		if (!$this->ion_auth->logged_in())
 		{	
 			//login == 0 // logout
 			//redirect them to the login page
-			$this->load->view('body/head.php');
-			redirect('auth/login', 'refresh');
-			$this->load->view('body/footer.php');
+			// $this->load->view('body/head.php');
+				redirect('auth/login', 'refresh');
+			// $this->load->view('body/footer.php');
 		}
 		elseif (!$this->ion_auth->is_admin()) //remove this elseif if you want to enable this for non-admins
 		{
 			//redirect them to the home page because they must be an administrator to view this
-			return show_error('You must be an administrator to view this page.');
+			// return show_error('You must be an administrator to view this page.');
+			// return show_error('No tienes permisos de administrador');
+			redirect('cliente', 'refresh');
 		}
 		else
 		{
 
 			//set the flash data error message if there is one
-			$this->data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
+			// $this->data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
 
 			//list the users
-			$this->data['users'] = $this->ion_auth->users()->result();
-			foreach ($this->data['users'] as $k => $user)
-			{
-				$this->data['users'][$k]->groups = $this->ion_auth->get_users_groups($user->id)->result();
-			}
+			// $this->data['users'] = $this->ion_auth->users()->result();
+			// foreach ($this->data['users'] as $k => $user)
+			// {
+			// 	$this->data['users'][$k]->groups = $this->ion_auth->get_users_groups($user->id)->result();
+			// }
 
-			$this->data['usuarios'] = $user = $this->ion_auth->user()->row();
-			$this->load->view('body/head.php');
-			// $this->load->view('body/navheader.php');
-			$this->load->view('body/user-panel.php');
-			// print_r($this->session->userdata('identity'));
-			$this->_render_page('auth/index', $this->data);
-			$this->load->view('body/footer.php');
+			// $this->data['usuarios'] = $user = $this->ion_auth->user()->row();
+
+			redirect('administrator', 'refresh');
 		}
 	}
 
@@ -58,6 +55,8 @@ class Auth extends CI_Controller {
 	function login()
 	{
 		$this->data['title'] = "Login";
+		$classData['skin'] = 'class="skin-black"';
+			 	// $this->data['valid']	= 0;
 
 		//validate form input
 		$this->form_validation->set_rules('identity', 'Identity', 'required');
@@ -71,40 +70,54 @@ class Auth extends CI_Controller {
 
 			if ($this->ion_auth->login($this->input->post('identity'), $this->input->post('password'), $remember))
 			{
-				//if the login is successful
-				//redirect them back to the home page
 				$this->session->set_flashdata('message', $this->ion_auth->messages());
 				redirect('/', 'refresh');
 			}
 			else
 			{
-				//if the login was un-successful
-				//redirect them back to the login page
-				$this->session->set_flashdata('message', $this->ion_auth->errors());
+				$data['valid'] = 1;
+				$data['message'] = 'Usuario o contraseña incorrectos';
+				$this->session->set_flashdata('sessionError', $data);
+
 				redirect('auth/login', 'refresh'); //use redirects instead of loading views for compatibility with MY_Controller libraries
 			}
 		}
 		else
 		{
-			//the user is not logging in so display the login page
-			//set the flash data error message if there is one
-			$this->data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
+			// $this->data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
+			//Validate texts == null
+			if(validation_errors()){
+			 $this->data['valid']	= 1;
+			 $this->data['message'] = 'Usuario o contraseña incorrectos';
+			}
+			else
+			{	
+			 	$this->data['valid']	= 0;
+			}
+
+			//Validate unsuccess
+			if($this->session->flashdata('sessionError')){
+				$data = $this->session->flashdata('sessionError');
+
+				$this->data['valid'] = $data['valid'];
+				$this->data['message'] = $data['message'];
+			}
 
 			$this->data['identity'] = array('name' => 'identity',
 				'id' => 'identity',
 				'type' => 'text',
 				'value' => $this->form_validation->set_value('identity'),
 				'class' => 'form-control',
-				'placeholder'=> 'Usuario'
+				'placeholder'=> 'Correo'
 			);
 			$this->data['password'] = array('name' => 'password',
 				'id' => 'password',
 				'type' => 'password',
 				'class' => 'form-control',
-				'placeholder'=> 'Contrasena'
+				'placeholder'=> 'Contraseña'
 			);
 
-			$this->load->view('body/head.php');
+			$this->load->view('body/head.php', $classData);
 			$this->_render_page('auth/login', $this->data);
 			$this->load->view('body/footer.php');
 		}
@@ -119,6 +132,7 @@ class Auth extends CI_Controller {
 		$logout = $this->ion_auth->logout();
 
 		//redirect them to the login page
+		$this->data['valid'] = 1;
 		$this->session->set_flashdata('message', $this->ion_auth->messages());
 		redirect('auth/login', 'refresh');
 	}

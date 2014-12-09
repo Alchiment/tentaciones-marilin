@@ -10,6 +10,13 @@
     Core: General style
 ----------------------------
 */
+.oculto{
+  visibility: hidden;
+}
+.visible{
+  
+  visibility: visible;
+}
 html,
 body {
   overflow-x: hidden!important;

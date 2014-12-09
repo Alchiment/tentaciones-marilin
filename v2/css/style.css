@@ -272,7 +272,7 @@
 				transition: all 0.3s ease-in-out;
 			}
 			.image img.img-title:hover{
-				box-shadow: 5px 5px 10px #2b252c, -5px -5px 10px #2b252c;
+				box-shadow: 2px 2px 2px #2b252c, -2px -2px 2px #2b252c;
 			}
 
 			.image.fit

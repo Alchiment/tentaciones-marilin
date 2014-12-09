@@ -1,4 +1,4 @@
-<div class="form-box" id="login-box">
+<!-- <div class="form-box" id="login-box"> -->
 
         <div class="header">
           <h1>
@@ -9,36 +9,77 @@
         <div id="infoMessage"><?php echo $message;?></div>
 
         <?php echo form_open(uri_string());?>
-        <div class="body bg-gray">
+        <div>
           
                <div class="form-group">
-                    <?php echo lang('edit_user_fname_label', 'first_name');?> <br />
-                    <?php echo form_input($first_name);?>
+                    <label><?php echo lang('edit_user_fname_label', 'first_name');?></label> <br />
+                    <div class="input-group">
+                      <div class="input-group-addon">
+                          <i class="fa fa-user"></i>
+                      </div>
+                      <?php echo form_input($first_name);?>
+                    </div><!-- /.input group -->
+              </div>
+                  <!-- <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/> -->
+
+              <div class="form-group">
+                    <label><?php echo lang('edit_user_lname_label', 'last_name');?> </label><br />
+                      <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-user"></i>
+                        </div>
+                        <?php echo form_input($last_name);?>
+                        
+                      </div><!-- /.input group -->
+
               </div>
 
               <div class="form-group">
-                    <?php echo lang('edit_user_lname_label', 'last_name');?> <br />
-                    <?php echo form_input($last_name);?>
+                    <label><?php echo lang('edit_user_company_label', 'company');?> </label><br />
+                      <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-suitcase"></i>
+                        </div>
+                        <?php echo form_input($company);?>
+                        
+                      </div><!-- /.input group -->
+
               </div>
 
               <div class="form-group">
-                    <?php echo lang('edit_user_company_label', 'company');?> <br />
-                    <?php echo form_input($company);?>
+                    <label><?php echo lang('edit_user_phone_label', 'phone');?> </label><br />
+                      <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <?//php echo form_input($phone);?>
+                        <input type="<?=$phone['type']?>" name="<?= $phone['name']?>" class="<?= $phone['class']?>" value="<?=$phone['value']?>" data-inputmask="'mask': ['999-999-9999 [x99999]', '+099 99 99 9999[9]-9999']" data-mask/>
+                      </div><!-- /.input group -->
+
               </div>
 
               <div class="form-group">
-                    <?php echo lang('edit_user_phone_label', 'phone');?> <br />
-                    <?php echo form_input($phone);?>
+                    <label><?php echo lang('edit_user_password_label', 'password');?> </label><br />
+                      <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-key"></i>
+                        </div>
+                        <?php echo form_input($password);?>
+                        
+                      </div><!-- /.input group -->
+
               </div>
 
               <div class="form-group">
-                    <?php echo lang('edit_user_password_label', 'password');?> <br />
-                    <?php echo form_input($password);?>
-              </div>
+                    <label><?php echo lang('edit_user_password_confirm_label', 'password_confirm');?></label><br />
+                      <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-key"></i>
+                        </div>
+                        <?php echo form_input($password_confirm);?>
+                        
+                      </div><!-- /.input group -->
 
-              <div class="form-group">
-                    <?php echo lang('edit_user_password_confirm_label', 'password_confirm');?><br />
-                    <?php echo form_input($password_confirm);?>
               </div>
 
               <?php if ($this->ion_auth->is_admin()): ?>
@@ -74,4 +115,4 @@
 
         <?php echo form_close();?>
 
-</div>
+<!-- </div> -->

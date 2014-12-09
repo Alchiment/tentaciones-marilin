@@ -1,14 +1,7 @@
 
 <aside class="right-side">
-	<!-- <div class="col-xs-12"> -->
-	<?php// print($usuarios->username);?>        
-<?php foreach($usuarios as $key => $value):?>
-    <?=$value?>  <br>
-<?php endforeach?>
 	<section class="content-header">
 				<h1 class="box-title"><?php echo lang('index_heading');?></h1>
-				<!-- <button class="btn btn-default pull-left"><?//=anchor('auth/create_user', lang('index_create_user_link'))?></button> -->
-				<!-- <button class="btn btn-default pull-left"><?//=anchor('auth/create_group', lang('index_create_group_link'));?></button> -->
 				<p class="pull-right"><?php echo lang('index_subheading');?></p><br>
 		</section>
 		<section class="content">
