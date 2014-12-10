@@ -14,8 +14,8 @@
 | path to your installation.
 |
 */
-// $config['base_url']	= 'http://220.220.221.65/tentaciones-marilin/dashboard/';
-$config['base_url']	= 'http://220.220.221.163/tentaciones-marilin/dashboard/';
+
+$config['base_url']	= '';
 
 /*
 |--------------------------------------------------------------------------
